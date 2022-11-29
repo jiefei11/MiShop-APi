@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mishop?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+  mail:
+    host: smtp.qq.com # 配置 smtp 服务器地址
+    port: 587 # smtp 服务器的端口
+    username: 2417394866@qq.com # 配置邮箱用户名(你的邮箱地址)
+    password: rwbfznrqllnqebde # 配置申请到的授权码(刚让复制的授权码)
+    default-encoding: UTF-8 # 配置邮件编码
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory # 配饰 SSL 加密工厂
+        debug: true
+    from: 2417394866@qq.com # 发送方邮件，配在yml中可方便更改
+server:
+  port: 8888
+
+tencent:
+  appId: 1310937359
+  secretId: AKIDPktthHdjaGk27yc2EBtMZXHn47wVoyxm
+  secretKey: g8LK3XmnZ5LSN6brvksmRr1wb3GDvNaX
+  region: ap-nanjing
+  photoBucket: bhgeek-blog-1310937359
